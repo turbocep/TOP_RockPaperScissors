@@ -4,3 +4,19 @@ Understand:
 *Rewrite problem in plain English until you can easily explain it.
 
 The user plays against the computer. The user and computer each select one of three options: rock, paper or scissors. When they've both selected them, their choices are revealed. Either players wins or the round is tied based on the following criteria. Rock beats scissors. Scissors beat paper. paper beats rock. If both players select the same option, they are tied. Rounds repeat for a specific number until the winner is declared based on having a greater number of wins. 
+
+Plan:
+  UI:
+    There is no UI, for now. That's an idea for a future improvement.
+  Inputs:
+    The player's input is received via a prompt window. The bot randomly generates a choice based on the random function.
+  Outputs:
+    The result of the bot's choice, player's choice, round score and final score are outputted using an alert window. 
+  Steps:
+    DECLARE variables playerScore, botScore, playerInput, botInput.
+    CREATE function that receives bot's play choice.
+    CREATE function that prompts player to input choice.
+    CREATE function that decides who won the round.
+
+Divide & Conquer:
+  I'll start with declaring basic variables, because that's the easiest step.
