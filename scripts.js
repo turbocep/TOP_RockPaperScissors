@@ -10,3 +10,10 @@ function getHumanChoice() {
 let humanScore = 0;
 let computerScore = 0;
 
+function playRound(humanChoice, computerChoice) {
+  if ((humanChoice == "rock" || humanChoice == "ROCK") && (computerChoice == "paper" || computerChoice == "PAPER")) {
+    console.log("You lose! Paper beats Rock.");
+    computerScore++;
+  }
+}
+
