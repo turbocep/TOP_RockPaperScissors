@@ -9,14 +9,16 @@ Plan:
   UI:
     There is no UI, for now. That's an idea for a future improvement.
   Inputs:
-    The player's input is received via a prompt window. The bot randomly generates a choice based on the random function.
+    The player's input is received via the console. The bot randomly generates a choice based on the random function.
   Outputs:
-    The result of the bot's choice, player's choice, round score and final score are outputted using an alert window. 
+    The result of the bot's choice, player's choice, round score and final score are outputted using the console.
   Steps:
     DECLARE variables playerScore, botScore, playerInput, botInput.
     CREATE function that receives bot's play choice.
     CREATE function that prompts player to input choice.
     CREATE function that decides who won the round.
+  Pseudo-code:
+
 
 Divide & Conquer:
   I'll start with declaring basic variables, because that's the easiest step.
