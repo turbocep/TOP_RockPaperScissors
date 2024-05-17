@@ -1,0 +1,6 @@
+This is an overview of the Understand-Plan-Divide&Conquer problem-solving approach taught in The Odin Project. 
+
+Understand: 
+*Rewrite problem in plain English until you can easily explain it.
+
+The user plays against the computer. The user and computer each select one of three options: rock, paper or scissors. When they've both selected them, their choices are revealed. Either players wins or the round is tied based on the following criteria. Rock beats scissors. Scissors beat paper. paper beats rock. If both players select the same option, they are tied. Rounds repeat for a specific number until the winner is declared based on having a greater number of wins. 
