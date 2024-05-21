@@ -61,15 +61,6 @@ else if ((humanChoice == "scissors" || humanChoice == "SCISSORS") && computerCho
 const humanChoices = ["rock", "ROCK", "paper", "PAPER", "scissors", "SCISSORS"];
 const computerChoices = ["rock", "paper", "scissors"];
 
-for (let i = 0; i < 6; i++) {
-  for (let j = 0; j < 3; j++) {
-    console.log(`___New Round___`);
-    console.log(`Player: ${humanChoices[i]}`);
-    console.log(`Bot: ${computerChoices[j]}`);
-    playRound(humanChoices[i], computerChoices[j]);
-    console.log(`Score: ${humanScore}:${computerScore};`);
-  }
-}
 
 
 
