@@ -75,4 +75,6 @@ function playGame() {
   }
 }
 
+//Issue: If the player cancels every prompt, the result registers as null and the game is tied at the end.
+
 playGame();
