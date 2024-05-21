@@ -59,4 +59,7 @@ function playGame() {
     console.log("Tie! You both picked scissors.");
   }
   }
+  for (let i = 0; i < 5; i++) {
+    playRound(getHumanChoice(), getComputerChoice());
+  }
 }
