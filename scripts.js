@@ -60,6 +60,9 @@ function playGame() {
   }
   }
   for (let i = 0; i < 5; i++) {
+    console.log(`Round ${i}:`);
     playRound(getHumanChoice(), getComputerChoice());
   }
 }
+
+playGame();
