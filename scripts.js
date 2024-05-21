@@ -15,6 +15,8 @@ function playGame() {
 
   //Rewrite into nested IF statements: 
   function playRound(humanChoice, computerChoice) {
+    console.log(`You picked ${humanChoice}.`)
+    console.log(`Computer picked ${computerChoice}.`)
     //playerChoice > OR < OR == computerChoice
     //rock < paper
     if ((humanChoice == "rock" || humanChoice == "ROCK") && computerChoice == "paper") {
@@ -62,6 +64,7 @@ function playGame() {
   for (let i = 0; i < 5; i++) {
     console.log(`Round ${i}:`);
     playRound(getHumanChoice(), getComputerChoice());
+    console.log(`Score: ${humanScore}/${computerScore}`);
   }
 }
 
