@@ -57,10 +57,3 @@ else if ((humanChoice == "scissors" || humanChoice == "SCISSORS") && computerCho
   console.log("Tie! You both picked scissors.");
 }
 }
-
-const humanChoices = ["rock", "ROCK", "paper", "PAPER", "scissors", "SCISSORS"];
-const computerChoices = ["rock", "paper", "scissors"];
-
-
-
-
