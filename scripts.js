@@ -50,7 +50,7 @@ function playRound(humanChoice, computerChoice) {
   // scissors > paper
   else if ((humanChoice == "scissors" || humanChoice == "SCISSORS") && computerChoice == "paper") {
     console.log("You win! Scissors beat paper.");
-    playerScore++;
+    humanScore++;
 }
 // scissors == scissors
 else if ((humanChoice == "scissors" || humanChoice == "SCISSORS") && computerChoice == "scissors") {
@@ -58,9 +58,18 @@ else if ((humanChoice == "scissors" || humanChoice == "SCISSORS") && computerCho
 }
 }
 
-playRound("rock", "rock");
+const humanChoices = ["rock", "ROCK", "paper", "PAPER", "scissors", "SCISSORS"];
+const computerChoices = ["rock", "paper", "scissors"];
 
-console.log(humanScore);
-console.log(computerScore);
+for (let i = 0; i < 6; i++) {
+  for (let j = 0; j < 3; j++) {
+    console.log(`___New Round___`);
+    console.log(`Player: ${humanChoices[i]}`);
+    console.log(`Bot: ${computerChoices[j]}`);
+    playRound(humanChoices[i], computerChoices[j]);
+    console.log(`Score: ${humanScore}:${computerScore};`);
+  }
+}
+
 
 
