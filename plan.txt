@@ -22,3 +22,41 @@ Plan:
 
 Divide & Conquer:
   I'll start with declaring basic variables, because that's the easiest step.
+
+##Feature/simpler-play-round-algorithm Plan:
+Understand:
+  The problem is that the current algorithm seems awfully repetitive. I think I can simplify it with a bunch of nested if loops. I'll hack around and find out.
+
+Every possible combo:
+[rock, rock], [rock, paper], [rock, scissors], [paper, rock], [paper, paper], [paper, scissors], [scissors, rock], [scissors, paper], [scissors, scissors].
+
+Optimizations:
+  1. Make equal results just return a tie. No need for custom commentary.
+
+  2. Create function that checks winner.
+
+  3. Create function that outputs round messages. Functions should have one purpose only. 
+
+  4. Create endGame function that outputs messages.
+
+Pseudo code:
+  CREATE showWelcomeMessage function. 
+
+  CREATE function that gets random computerChoice.
+  
+  CREATE function that gets user's input and converts to easier form. 
+
+  CREATE function that returns winner of round based on user's choice and bot's choice. 
+
+  CREATE function that shows winner of game. 
+
+  CREATE play game function.
+    Display welcome message. 
+    LOOP for five rounds.
+      GET user's input. 
+      GET computer's input. 
+      SHOW winner of round.
+      INCREMENT game scores. 
+      SHOW game scores. 
+    SHOW winner.
+    SHOW final scores. 
