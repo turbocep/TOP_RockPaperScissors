@@ -11,3 +11,9 @@ const rockRef = buttons[0];
 const paperRef = buttons[1];
 const scissorsRef = buttons[2];
 
+const outScore = document.querySelector(".score");
+const outPlays = document.querySelector(".plays");
+const outResult = document.querySelector(".result");
+
+
+
