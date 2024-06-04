@@ -15,5 +15,18 @@ const outScore = document.querySelector(".score");
 const outPlays = document.querySelector(".plays");
 const outResult = document.querySelector(".result");
 
+let playerScore = 0;
+let botScore = 0;
+
+//Function: Update score.
+function updateScore() {
+  outScore.textContent = `${playerScore}:${botScore}`;
+}
+
+updateScore();
+//Function: Who played what message.
+
+//Function: Who won the round. 
+
 
 
