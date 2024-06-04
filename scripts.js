@@ -4,6 +4,11 @@ function getComputerChoice() {
   return choices[Math.floor(Math.random() * 3)];
 }
 
+//Function: Update score.
+function updateScore() {
+  outScore.textContent = `${playerScore}:${botScore}`;
+}
+
 //Creating button references
 const buttons = document.querySelectorAll("button");
 
@@ -18,12 +23,20 @@ const outResult = document.querySelector(".result");
 let playerScore = 0;
 let botScore = 0;
 
-//Function: Update score.
-function updateScore() {
-  outScore.textContent = `${playerScore}:${botScore}`;
-}
+rockRef.addEventListener("click", () => {
+  return "rock";
+})
 
-updateScore();
+paperRef.addEventListener("click", () => {
+  return "paper";
+})
+
+scissorsRef.addEventListener("click", () => {
+  return "scissors";
+})
+
+
+
 //Function: Who played what message.
 
 //Function: Who won the round. 
