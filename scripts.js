@@ -5,3 +5,9 @@ function getComputerChoice() {
 }
 
 //Creating button references
+const buttons = document.querySelectorAll("button");
+
+const rockRef = buttons[0];
+const paperRef = buttons[1];
+const scissorsRef = buttons[2];
+
