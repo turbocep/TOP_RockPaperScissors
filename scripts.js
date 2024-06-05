@@ -29,7 +29,7 @@ function getWinner(playerChoice, botChoice) {
   } else if (playerChoice == "scissors") {
     if (botChoice == "rock") {
       return "bot";
-    } else if (botChoice == paper) {
+    } else if (botChoice == "paper") {
       return "player";
     }
   }
@@ -55,10 +55,14 @@ function playRound(playerChoice) {
   updateScore();
   if (playerScore == 5) {
     endGame();
-    outResult.textContent = "You won the game!"
+    outResult.style.fontSize = "24px";
+    outResult.textContent = "You won the game!";
+    document.querySelector(".win").play();
   } else if (botScore == 5) {
     endGame();
-    outResult.textContent = "You lost the game!"
+    outResult.style.fontSize = "24px";
+    outResult.textContent = "You lost the game!";
+    document.querySelector(".lose").play();
   }
 }
 
