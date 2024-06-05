@@ -9,7 +9,7 @@ function updateScore() {
   outScore.textContent = `${playerScore}:${botScore}`;
 }
 
-//Creating button references
+//Getting DOM references
 const buttons = document.querySelectorAll("button");
 
 const rockRef = buttons[0];
@@ -52,14 +52,29 @@ function getWinner(playerChoice, botChoice) {
   }
 }
 
+function playRound(playerChoice) {
+  const botChoice = getComputerChoice();
+  const resultOfRound = getWinner(playerChoice, botChoice);
+
+  if (resultOfRound == "bot") {
+    botScore++;
+    outResult.textContent = "You lost this round.";
+  } else if (resultOfRound == "player") {
+    playerScore++;
+    outResult.textContent = "You won this round.";
+  } else {
+    outResult.textContent = "It's a tie!";
+  }
+}
+
 
 
 
 //Function: Who played what message.
 
-//rock > scissors > paper > rock;
 
-//Function: Who won the round. 
+
+
 
 
 
