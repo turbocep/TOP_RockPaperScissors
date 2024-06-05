@@ -41,6 +41,7 @@ function getWinner(playerChoice, botChoice) {
 function playRound(playerChoice) {
   const botChoice = getComputerChoice();
   const resultOfRound = getWinner(playerChoice, botChoice);
+  outPlays.textContent = `You played ${playerChoice}. The Bot played ${botChoice}.`
 
   if (resultOfRound == "bot") {
     botScore++;
@@ -53,21 +54,22 @@ function playRound(playerChoice) {
   }
   updateScore();
   if (playerScore == 5 || botScore == 5) {
-    //end game function. Turn-off button events and display final winner.
+    alert("over");
   }
 }
 
-//Adding event listeners for buttons. 
-rockRef.addEventListener("click", () => {
-  playRound("rock");
-})
-paperRef.addEventListener("click", () => {
-  playRound("paper");
-})
-scissorsRef.addEventListener("click", () => {
-  playRound("scissors");
-})
+function endGame() {
+  rockRef.removeEventListener("click", () => {
+    playRound("rock");
+  })
+  paperRef.removeEventListener("click", () => {
+    playRound("paper");
+  })
+  scissorsRef.removeEventListener("click", () => {
+    playRound("scissors");
+  })
 
+}
 
 //Getting DOM references
 const buttons = document.querySelectorAll("button");
@@ -83,7 +85,16 @@ const outResult = document.querySelector(".result");
 let playerScore = 0;
 let botScore = 0;
 
-
+//Adding event listeners for buttons. 
+rockRef.addEventListener("click", () => {
+  playRound("rock");
+})
+paperRef.addEventListener("click", () => {
+  playRound("paper");
+})
+scissorsRef.addEventListener("click", () => {
+  playRound("scissors");
+})
 
 
 
