@@ -53,22 +53,19 @@ function playRound(playerChoice) {
     outResult.textContent = "It's a tie!";
   }
   updateScore();
-  if (playerScore == 5 || botScore == 5) {
-    alert("over");
+  if (playerScore == 5) {
+    endGame();
+    outResult.textContent = "You won the game!"
+  } else if (botScore == 5) {
+    endGame();
+    outResult.textContent = "You lost the game!"
   }
 }
 
 function endGame() {
-  rockRef.removeEventListener("click", () => {
-    playRound("rock");
-  })
-  paperRef.removeEventListener("click", () => {
-    playRound("paper");
-  })
-  scissorsRef.removeEventListener("click", () => {
-    playRound("scissors");
-  })
-
+  rockRef.remove();
+  paperRef.remove();
+  scissorsRef.remove();
 }
 
 //Getting DOM references
@@ -96,8 +93,7 @@ scissorsRef.addEventListener("click", () => {
   playRound("scissors");
 })
 
-
-
+//Next problem: Disabling the buttons when the game is over. 
 
 
 
